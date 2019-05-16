@@ -1,148 +1,85 @@
-*{margin:0; padding:0;}
-
-/* estilo logo*/
-.brand-lol{
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 900px) {
+    #lifebar,#logo {
+    display: none;
+    }
+    }
+  
+  
+  /* estilo logo*/
+  .brand-lol {
     display: block;
     padding-top: 1%;
     justify-content: center;
     margin: auto;
     width: 60%;
-    
-}
-
-/*estilo texto*/
-h4{
-  text-align:center;
-  font-family: 'ZCOOL KuaiLe';
-  color:rgb(160, 173, 41);
-}
-
-/* div generico*/
-.div {
-   text-align:center;
-   padding: 20px;
-}
-
-/*estilo fondo body*/
-.body-champs{
+  
+  }
+  
+  /*estilo texto*/
+  h4 {
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe';
+    color: rgb(160, 173, 41);
+  }
+  
+  /* div generico*/
+  .div {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /*estilo fondo body*/
+  .body-champs {
     background-image: url("https://i.ibb.co/1vGFvWJ/fondo4.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
     padding: 20px;
-}
-
-header{
+  }
+  
+  header {
     width: 100%;
     height: 50px;
     background: transparent;
-}
-
-.container-header{
+  }
+  
+  .container-header {
     width: 100%;
     max-width: 1200px;
     position: relative;
     margin: auto;
-}
-
-.logo-title{
+  }
+  
+  .logo-title {
     display: flex;
-}
-.logo-title img{
+  }
+  
+  .logo-title img {
     width: 160px;
     height: 90px;
     margin-top: 10px;
     margin-left: 0px;
     position: relative;
     left: 0px;
-    border-radius:40px;
-
-}
-/*
-.logo-title h5{
-    font-family: 'ZCOOL KuaiLe';
-    color:rgb(41, 168, 173);
-    font-weight: 100;
-    padding-top: 1%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-*/
-.icon-menu{
+    border-radius: 40px;
+  }
+  
+  .icon-menu {
     position: absolute;
     right: 10px;
     top: 14px;
-    color:#f2bc00 solid 1px;
+    color: #f2bc00 solid 1px;
     font-size: 28px;
-}
-/*
-.header{
-    width: 100%;
-    oerflow: hidden;
-    margin-bottom: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background:rgb(129, 141, 16);
-    display: flex;
-}*/
-
-.wrapper{
-    width:100%;
-    max-width:1000px;
-    padding:10px 20px;
-    margin:auto;
-    overflow: hidden;
-}
-
-.wrapper.nav{
-    float: right;
-    line-height:200px;
-}
-
-.wrapper nav a{
-    display: inline-block;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 20px;
-    line-height:normal;
-    font-size:20px;
-    font-weight: bold;
-    -webkit-transition:all 500ms ease;
-    -o-transition:all 500ms ease;
-    transition:all 500ms ease;
-}
-
-wrapper nav a:hover {
-    background:#24c3ce;
-    border-radius:50px;
-}
-
-/*pensado en el responsive*/
-@media screen and (max-width:950px){
-    header .logo,
-    container{
-        padding-top: 20%;
-    }
-    wrapper nav {
-        width:100%;
-        text-align:center;
-        line-height:100px;
-    }
-    /*
-    lifebar-lol {
-        width:100%;
-        text-align:center;
-        line-height:100px;
-        padding-top: 20%;
-    }*/
-} 
-
-/*HISTORIA DE USUARIO 1- CARDS PARA MOSTRAR DATA*/
-#root{
+  }
+  
+  /*HISTORIA DE USUARIO 1- CARDS PARA MOSTRAR DATA*/
+  #root {
     display: flex;
     flex-wrap: Wrap;
     flex-direction: row;
@@ -155,14 +92,11 @@ wrapper nav a:hover {
     outline-style: ridge;
     outline-color: #ffde44;
     border: #f2bc00 solid 1px;
-}
-.root img{
-    display: flex;
-    align-content: flex-end;
-}
-
-/*estilo a las cards, movimiento, imagen, borde*/ 
-#flip-container{
+  }
+  
+  
+  /*estilo a las cards, movimiento, imagen, borde*/
+  #flip-container {
     -webkit-perspective: 1000px;
     color: #896331;
     border: 3px solid #937341;
@@ -176,12 +110,13 @@ wrapper nav a:hover {
     width: 150px;
     height: 200px;
     float: left;
-    outline:none;
+    outline: none;
     word-wrap: break-word;
     text-decoration: none;
-
-}
-.cards {
+  
+  }
+  
+  .cards {
     position: relative;
     width: 100px;
     height: 100px;
@@ -190,23 +125,29 @@ wrapper nav a:hover {
     transform-style: preserve-3d;
     transform-origin: 100% 25px;
     margin: autox;
-}
-.cards:hover, .cards.flip{
+  }
+  
+  .cards:hover,
+  .cards.flip {
     transform: rotateX(50deg);
     background-color: #07090a;
     border: 3px solid rgb(20, 19, 20);
     opacity: 1;
     transition: 0.3s ease;
     cursor: pointer;
-}
-.card:active{
+  }
+  
+  .card:active {
     transform: translateY(2px);
-}
-.card img{
+  }
+  
+  .card img {
     display: flex;
     align-content: flex-end;
-}
-.front, .back{
+  }
+  
+  .front,
+  .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -214,7 +155,8 @@ wrapper nav a:hover {
     backface-visibility: hidden;
     text-align: center;
   }
-.front{
+  
+  .front {
     transform: rotateX(0deg);
     z-index: 2;
     background-color: #4f6480;
@@ -224,22 +166,22 @@ wrapper nav a:hover {
     align-items: center;
     justify-content: center;
   }
-.back{
+  
+  .back {
     transform: rotateX(180deg);
-    background: repeating-linear-gradient(
-      -45deg,
-      #ececec,
-      #ececec 10px,
-      #dedede 10px,
-      #dedede 20px
-    );
-}
-
-/*HISTORIA DE USUARIO 2 y 3 - OPCIONES PARA ORDENAR Y FILTRAR DATA*/
-/* estilo a la Div, Barra opciones para Ordenar,Home, Filtrar*/
-.menu-bar{
+    background: repeating-linear-gradient(-45deg,
+        #ececec,
+        #ececec 10px,
+        #dedede 10px,
+        #dedede 20px);
+  }
+  
+  /*HISTORIA DE USUARIO 2 y 3 - OPCIONES PARA ORDENAR Y FILTRAR DATA*/
+  /* estilo a la Div, Barra opciones para Ordenar,Home, Filtrar*/
+  
+  .menu-bar {
     display: flex;
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;*/
     margin: auto;
     padding: 0%;
     background-color: transparent;
@@ -247,57 +189,35 @@ wrapper nav a:hover {
     overflow: hidden;
     font-family: aGaramondPro;
     /*width: 2000;
-    max-width:2000px;
-    height: 1500;*/    
-}
-
-.menu-bar li{
-   width: 1000px;
-}
-
-.menu-bar ul{
+      max-width:2000px;
+      height: 1500;*/
+      
+  }
+  
+  .menu-bar li {
+    width: 1000px;
+  }
+  
+  .menu-bar ul {
     width: 3000px;
-    
- }
-
-.menu-bar a{
-   display: block;
-   color: white;
-   font-size: 25px;
-   text-decoration: none;
-   text-align: center; 
-   padding: 10px;  
-}
-
-.menu-bar a:hover:not(.active) {
+  
+  }
+  
+  .menu-bar a {
+    display: block;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .menu-bar a:hover:not(.active) {
     background: rgb(12, 12, 12, 0.9);
     border-radius: 20px;
-}
-
-/*HISTORIA DE USUARIO 2 Y 3 - SELECT PARA ORDENAR Y FILTRAR DATA*/
-/*Ordenar, Filtrar */
-.search-bar{
-    border: none;
-    border-radius: 5px;
-    opacity: 0.0 - 1.0;
-    /*visibility: hidden;*/
-    /*background-color: rgba(217, 217, 219,0.8);*/
-    padding: 8px;
-    width: 90%;
-    margin: 20px auto auto auto;
-}
-
-.champs-sort, .champs-search, .champs-filter{
-    padding: 2px;
-    justify-content: center;
-    border: none
-}
-
-.champs-sort label{
-    font-family: 'ZCOOL KuaiLe';
-    font-size: 15px;
-}
-.lol-sort{
+  }
+  
+  .lol-sort {
     border: 2px solid #896331;
     font-family: 'ZCOOL KuaiLe';
     font-weight: bold;
@@ -305,14 +225,16 @@ wrapper nav a:hover {
     background-color: #937341;
     /**/
     /*float: left;*/
-}
-.lol-sort:hover{
+  }
+  
+  .lol-sort:hover {
     background-color: rgb(55, 219, 248);
-}
-.lol-sort option{
-    font-weight: bold;
-}
-.lol-filter {
+  }
+  
+  /*.lol-sort-option{
+      font-weight: bold;
+  }*/
+  .lol-filter {
     border: 2px solid #896331;
     font-family: 'ZCOOL KuaiLe';
     font-weight: bold;
@@ -320,29 +242,31 @@ wrapper nav a:hover {
     background-color: #937341;
     /**/
     /*float: left;*/
-    
+  
     /*
-    background: url(https://i.ibb.co/2SBwkBh/sprites-select.png) 0 -293px;color: #b2d9db;
-    float: right;
-    height: 45px;
-    line-height: 28px;
-    margin: 5px 0 0 17px;
-    padding: 10px 0 0 0;
-    position: relative;
-    text-align: center;
-    width: 129px;
-    z-index: 0;*/
-}
-.lol-filter:hover{
+      background: url(https://i.ibb.co/2SBwkBh/sprites-select.png) 0 -293px;color: #b2d9db;
+      float: right;
+      height: 45px;
+      line-height: 28px;
+      margin: 5px 0 0 17px;
+      padding: 10px 0 0 0;
+      position: relative;
+      text-align: center;
+      width: 129px;
+      z-index: 0;*/
+  }
+  
+  .lol-filter:hover {
     background-color: rgb(23, 111, 133);
-}
-.lol-filter option{
+  }
+  
+  .lol-filter-option {
     font-weight: bold;
-}
-
-/*HISTORIA DE USUARIO 4 - CALCULO DE LA DATA PARA MOSTRAR AL FILTRAR DATA*/
-/* ESTILO DIV CALCULO*/
-#calculation{
+  }
+  
+  /*HISTORIA DE USUARIO 4 - CALCULO DE LA DATA PARA MOSTRAR AL FILTRAR DATA*/
+  /* ESTILO DIV CALCULO*/
+  #calculation {
     display: none;
     width: 350px;
     height: 60px;
@@ -352,60 +276,49 @@ wrapper nav a:hover {
     /*background-color: #5f7f91;*/
     font-family: 'ZCOOL KuaiLe';
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
     color: rgb(11, 37, 26);
     padding-top: 1%;
     border: #46390e solid 2px;
     border-radius: 2px;
-}
-/*PARA FINALIZAR Y MÁS INFORMACIÓN AL USUARIO, REDES SOCIALES*/
-/*estilo al pie de pagina,*/
-.footer{
+  }
+  
+  /*PARA FINALIZAR Y MÁS INFORMACIÓN AL USUARIO, REDES SOCIALES*/
+  /*estilo al pie de pagina,*/
+  .footer {
     width: 100%;
     height: 100%;
-
+  
     background: transparent;
     line-height: 50px;
     /*position: absolute;*/
     bottom: 0;
     padding: 2%;
-    
-    
-}
-.container-footer{
+  
+  
+  }
+  
+  .container-footer {
     width: 100%;
     max-width: 1200px;
-    padding: 2%;   
-}
-
-/*ESTILO DEL MODAL*/
-.modal-dialog{
-    width:50vw; 
-    height:50vh; 
-}
-
-.modal-img{
-    width:100%;
-    height:100%
-}
-
-.modal-body{
-    background-color:black;
+    padding: 2%;
+  }
+  
+  /*ESTILO DEL MODAL*/
+  .modal-dialog {
+    width: 50vw;
+    height: 50vh;
+  }
+  
+  .modal-img {
+    width: 100%;
+    height: 100%
+  }
+  
+  .modal-body {
+    background-color: black;
     opacity: 0.9;
     color: #937341;
     text-align: center;
-    
-}
-
-/*
-.ir-arriba {
-    display: inline-block;
-    padding: 20px;
-    background:#024959;
-    font-size: 20px;
-    color:#fff;
-    cursor: pointer;
-    position: fixed;
-    bottom:20px;
-    right:20px;
-}*/
+  
+  }

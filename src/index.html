@@ -6,84 +6,118 @@
   <title>Match Gamer-Champions League of Legends</title>
   <link rel="icon" type="image/png" href="https://i.ibb.co/VNkZtLn/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="body-champs">
-    <header class="col-12 col-sm-9 col-md-6">
-      <div class="container-header">
-        <div class="logo-title">
-          <img src="img/imgLogo.jpg" class="img-fluid" alt="Responsive image">
-        </div>
-        <label class="icon-mennu"></label>
+  <header class="col-12 ">
+    <div class="container-header">
+      <div class="logo-title">
+        <img src="img/imgLogo.jpg" id="logo" class="img-fluid" alt="Responsive image">
       </div>
-    </header>
-  <div class="container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <a href="./index.html"><img src="https://i.ibb.co/sWjyLcw/lifebartext.png" class="img-fluid" alt="Responsive image"></a> 
-      <div class="wrapper col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <nav class="navbar col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <ul id ="menú" class="menu-bar col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-<!--DIV QUE MUESTRA EL ORDENAR HU2-->
-            <li id="Order" class="menu-option">
-              <fieldset id="champs-sort" class="champs-sort">
-                <div id="lol-sort-option" class="lol-sort-option"></div>
-                <select id="lol-sort" name="orden" class="lol-sort">
-                  <option value="Selected">ORDENA POR</option>
-                  <option value="02">Dificultad Menor a Mayor</option>
-                  <option value="03">Dificultad Mayor a Menor</option>
-                  <option value="01">Nombre Z-A</option>
-                  <option value="00">Nombre A-Z</option>
-                </select>
-              </fieldset>
-            </li>
-<!--DIV QUE MUESTRA EL HOME-->
-            <li id ="Home">
-              <a href="./index.html" target="blanck"><img class = "iconf" src="https://i.ibb.co/xXv1mCz/boton2.png" alt=""></a>
-            </li>
-<!--DIV QUE MUESTRA EL FILTRO HU3-->
-            <li id="Filter" >
-              <fieldset id="champs-filter" class="champs-filter">
-                <div id="lol-filter-option" class="lol-filter-option"></div>
-                <div class="filter">
-                  <select id="lol-filter" name="filt" class="lol-filter">
-                    <option value="Selected">FILTRA POR ROL</option>
-                    <option value="Assassin">Assassin</option>
-                    <option value="Fighter">Fighter</option>
-                    <option value="Mage">Mage</option>
-                    <option value="Marksman">Marksman</option>
-                    <option value="Support">Support</option>
-                    <option value="Tank">Tank</option>   
-                  </select>
-                </div>  
-              </fieldset>
-            </li>
-          </ul>
-           <img src="https://i.ibb.co/w7RjSTN/barra.png" class = "brand-lol" alt="">
-        </nav>
-      </div>
-  <!--DIV QUE MUESTRA EL CALCULO HU4-->
-    <div>
-      <div id="calculation"></div>
+      <label class="icon-mennu"></label>
     </div>
-<!--DIV QUE MUESTRA LAS CARDS HU1-->
-    <div id="root" col-12 col-sm-9 col-md-6>
+  </header>
+
+  <div class="container col-12">
+    <!--barra de vida-->
+    <a href="./index.html"><img src="https://i.ibb.co/sWjyLcw/lifebartext.png" id="lifebar" class="img-fluid"
+        alt="Responsive image"></a>
+    <!--<div class="wrapper col-12">-->
+
+    <!--NAV CON LOS SELECT-->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" id="restart" href="./index.html">Menú de Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>   
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown limargin">
+        <select id="lol-sort" name="orden" class="form-control">
+          <option class="dropdown-item" value="Selected">ORDENA POR</option>
+          <option class="dropdown-item" value="02">Dificultad Menor a Mayor</option>
+          <option class="dropdown-item" value="03">Dificultad Mayor a Menor</option>
+          <option class="dropdown-item" value="01">Nombre Z-A</option>
+          <option class="dropdown-item" value="00">Nombre A-Z</option>
+        </select>
+      </li>  
+      <!--
+      <li id="Home">
+        <a href="./index.html" target="blanck"><img class="iconf" src="https://i.ibb.co/xXv1mCz/boton2.png"
+            alt=""></a>
+      </li>
+    -->
+      <li id="Filter" class="limargin">
+        <select id="lol-filter" class= "form-control">
+          <option class="dropdown-item" value="Selected">FILTRA POR ROL</option>
+          <option class="dropdown-item" value="Assassin">Assassin</option>
+          <option class="dropdown-item" value="Fighter">Fighter</option>
+          <option class="dropdown-item" value="Mage">Mage</option>
+          <option class="dropdown-item" value="Marksman">Marksman</option>
+          <option class="dropdown-item" value="Support">Support</option>
+          <option class="dropdown-item" value="Tank">Tank</option>
+        </select>
+      </li>
+
+       </ul>
+      
+
+      </div>
+      </nav>
+
+
+          <!--DIV FUNCIONES ORDENAR HOME Y FILTRAR-->
+
+    
+    <!--línea con flecha-->
+    <img src="https://i.ibb.co/w7RjSTN/barra.png" class="brand-lol" alt="">
+    </nav>
+    <!--</div>-->
+
+    <!--DIV QUE MUESTRA EL CALCULO HU4-->
+
+    <div id="calculation">
+    </div> 
+
+    <!--DIV QUE MUESTRA LAS CARDS HU1-->
+    <div id="root" class="col-12">
     </div>
   </div>
-<!--DIV QUE MUESTRA RRSS-->
+  <!--DIV QUE MUESTRA RRSS-->
   <footer>
     <div class="container-footer col-12 col-sm-12 ">
-      <a><h4>League of Legends, más información en redes sociales</h4></a> 
-      <a href="https://lan.leagueoflegends.com/es/tag/facebook" target="blanck"><img class = "iconf" src="https://i.ibb.co/hcmT7Fp/face.png" alt=""></a>
-      <a href="https://www.instagram.com/leagueoflegends/?hl=es-la" target="blanck"><img class="iconf" src="https://i.ibb.co/X5cFJ5w/insta.png" alt=""></a>
-      <a href="https://www.youtube.com/channel/UC2t5bjwHdUX4vM2g8TRDq5g" target="blanck"><img class="iconf" src="https://i.ibb.co/cvCKgHL/youtube.png" alt=""></a>
+      <a>
+        <h4>League of Legends, más información en redes sociales</h4>
+      </a>
+      <a href="https://lan.leagueoflegends.com/es/tag/facebook" target="blanck"><img class="iconf"
+          src="https://i.ibb.co/hcmT7Fp/face.png" alt=""></a>
+      <a href="https://www.instagram.com/leagueoflegends/?hl=es-la" target="blanck"><img class="iconf"
+          src="https://i.ibb.co/X5cFJ5w/insta.png" alt=""></a>
+      <a href="https://www.youtube.com/channel/UC2t5bjwHdUX4vM2g8TRDq5g" target="blanck"><img class="iconf"
+          src="https://i.ibb.co/cvCKgHL/youtube.png" alt=""></a>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-   <script src="./data/lol/lol.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./data/lol/lol.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
+
